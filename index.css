@@ -23,9 +23,6 @@ body {
     padding: 40px 20px;
 }
 
-.navbar {
-}
-
 .img-space {
     text-align: center;
     padding: 10px 10px;
@@ -34,6 +31,7 @@ body {
 .img-space img  {
     width: 90%;
     height: 200px;
+    
     
 }
 
