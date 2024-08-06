@@ -14,10 +14,10 @@ body {
     padding: 0px 200px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #AAAAAA;
-
 }
 
 .container {
+    display: relative;
     width: fixed;
     background-color: #F9F9F9;
     padding: 40px 20px;
@@ -31,48 +31,55 @@ body {
 .img-space img  {
     width: 90%;
     height: 200px;
-    
-    
 }
 
 .link-space {
     display: flex;
     background-color: white;
-    /* justify-content: s; */
-    padding: 10px 0px;
+    justify-content: space-between;
+    padding: 15px 10px;
+    /* z-index: 1; */
 }
 
 .link-space a {
+    /* margin-top: 10px; */
     padding: 10px 10px;
     text-decoration: none;
     color: black;
     font-weight: 800;
+    font-size: 20px;
+}
+
+.link-space .icon {
+    display: none;
 }
 
 /* .link-space a:hover {
     color: blue;
 } */
 
-.link-space svg {
-    justify-content: right;
-    text-align: right;
-    align-items: end;
-    margin: 0px 5px;
-    width: 50px;
+.link-space .link-svg {
+    display: flex;
+    padding: 0px 0px;
+    /* margin-top: px; */
+    /* margin: 5px; */
+    /* width: 10px; */
 }
 
-.link-space a svg:hover {
+.link-space .link-svg a svg:hover {
     color: blue;
 }
 
 
  a:hover:not(.active) {
     background-color: #CCF2F4;
-  }
+    border-radius: 5px;
+}
 
 .active {
     background-color: #A4EBF3;
-}
+    border-radius: 5px;
+    }
 
 .about-content {
     display: flex;
@@ -151,4 +158,65 @@ div.about-content {
 
 .outreach-desc img {
     width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 5px 10px;
+    }
+    .container {
+        /* display: block; */
+        width: 100vw;
+        padding: 10px 20px;
+    }
+    .link-space {
+        display: block;
+        padding: 10px 10px;
+    }
+    .link-space a {
+        /* width: 50px; */
+        display: block;
+    }
+    .link-space a .icon {
+        float: right;
+        display: block;
+    }
+    .link-space .link-svg  {
+        display: block;
+    }
+    .link-space a:not(:first-child) {display: none;}
+    .link-space .responsive {position: relative;}
+    .link-space .responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .link-space .responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .link-space .icon {
+        display: block;
+    }
+    .main-page section {
+        padding: 0px;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-content img {
+        position: relative;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .about-content p {
+        padding: 0px 0px;
+        /* display:block; */
+        /* padding: 0px 10px; */
+        line-height: normal;
+        line-break: normal;
+    }
 }
